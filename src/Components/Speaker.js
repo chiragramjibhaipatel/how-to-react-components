@@ -1,6 +1,5 @@
-import {useState} from "react"
+import {useState, useContext} from "react"
 import { SpeakerFilterContext } from "../context/SpeakerFilterContext";
-import { useContext } from "react";
 
 const Session = ({title, room}) => {
     return (
@@ -48,7 +47,7 @@ const Session = ({title, room}) => {
           }}>
           <i className={favorite?"fa fa-star orange": "fa fa-star-o orange"}/>
         {" "} Favorite {" "}
-        {inTransition && <i className="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>}
+        {inTransition && <i className="fa fa-circle-o-notch fa-spin" aria-hidden="true"/>}
         </span>
       </div>
     )

@@ -25,7 +25,17 @@ function SpeakerFilterProvider(
         );
 
     return(
-        <SpeakerFilterContext.Provider value={{showSessions, setShowSessions}}>
+        <SpeakerFilterContext.Provider value={
+            {
+                showSessions,
+                setShowSessions,
+                eventYear,
+                setEventYear,
+                searchQuery,
+                setSearchQuery,
+                EVENT_YEARS
+            }
+        }>
             {children}
         </SpeakerFilterContext.Provider>
     )
