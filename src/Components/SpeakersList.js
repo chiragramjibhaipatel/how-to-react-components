@@ -30,12 +30,10 @@ const SpeakersList = () => {
                     .filter(speaker => speaker.sessions.find((session => session.eventYear === eventYear)))
                     .map(function (speaker){
                     return (
-                        <Speaker key={speaker.id}  speaker={speaker}  
-                        onFavoriteToggle={(doneCallback) => updateRecord(
-                            {
-                                ...speaker,
-                                favorite: !speaker.favorite
-                            }, doneCallback) }/>
+                        <Speaker key={speaker.id}
+                                 speaker={speaker}
+                                 updateRecord={updateRecord}
+                        />
                         )
                     })}
             </ReactPlaceholder>

@@ -9,8 +9,7 @@ function SpeakerFilterProvider(
             startingEventYear = "2019", 
             children
         }
-    ) {
-
+) {
     const {
         showSessions, 
         setShowSessions,
@@ -20,8 +19,8 @@ function SpeakerFilterProvider(
         setSearchQuery,
         EVENT_YEARS
     } = useSpeakerFilter(
-        startingShowSession, 
-        startingEventYear
+            startingShowSession,
+            startingEventYear
         );
 
     return(
